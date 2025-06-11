@@ -121,7 +121,7 @@ for (let i = 1; i <= 5; i++) {
 
 ```javascript
 let i = 1;
-while (i <= 5) {
+while (user === "Fritz") {
   console.log("while-Durchlauf: " + i);
   i++;
 }
