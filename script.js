@@ -51,7 +51,7 @@ const filme = [
     jahr: 2019,
     marke: "Apple",
     beschreibung:
-      "Ein beliebtes Modell mit Dual-Kamera, starkem A13-Chip und guter Akkulaufzeit zum erschwinglichen Preis.",
+      "Ein beliebtes Modell mit Dual-KKSamera, starkem A13-Chip und guter Akkulaufzeit zum erschwinglichen Preis.",
     bild: "https://d1sph3ugltqve4.cloudfront.net/media/catalog/product/cache/b09b85a509be4ef78402476382175894/i/p/iphone_11_black_full_cover_fffa.jpg",
   },
 ];
