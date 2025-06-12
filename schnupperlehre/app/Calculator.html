@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"
+    ></script>
+    <script>
+      function zahlEinsetzen(zahl) {
+        let aktuellerWert = document.getElementById("display").innerText;
+        document.getElementById("display").innerText = aktuellerWert + zahl;
+      }
+
+      function löschen() {
+        document.getElementById("display").innerText = "";
+      }
+      function einsLöschen() {
+        let aktuellerWert = document.getElementById("display").innerText;
+        document.getElementById("display").innerText = aktuellerWert.slice(
+          0,
+          -1
+        );
+      }
+
+      function gleich(){
+  let aktuellerWert = document.getElementById("display").innerText;
+   document.getElementById("display").innerText = eval(aktuellerWert)
+   }
+
+
+
+    </script>
+  </head>
+  <body>
+    <!-- Deine Produktinhalte kommen hier hin -->
+
+    <div id="display"></div>
+
+    <div>
+      <sl-button variant="primary" pill onclick="zahlEinsetzen(1)">1</sl-button>
+      <sl-button variant="primary" pill onclick="zahlEinsetzen(2)">2</sl-button>
+      <sl-button variant="primary" pill onclick="zahlEinsetzen(3)">3</sl-button>
+      <sl-button variant="primary" pill onclick="zahlEinsetzen('/')"
+        >/</sl-button
+      >
+    </div>
+    <div>
+      <sl-button variant="primary" pill onclick="zahlEinsetzen(4)">4</sl-button>
+      <sl-button variant="primary" pill onclick="zahlEinsetzen(5)">5</sl-button>
+      <sl-button variant="primary" pill onclick="zahlEinsetzen(6)">6</sl-button>
+      <sl-button variant="primary" pill onclick="zahlEinsetzen('*')"
+        >*</sl-button
+      >
+    </div>
+
+    <sl-button variant="primary" pill onclick="zahlEinsetzen(7)">7</sl-button>
+    <sl-button variant="primary" pill onclick="zahlEinsetzen(8)">8</sl-button>
+    <sl-button variant="primary" pill onclick="zahlEinsetzen(9)">9</sl-button>
+    <sl-button variant="primary" pill onclick="zahlEinsetzen('-')">-</sl-button>
+
+    <div>
+      <sl-button variant="primary" pill onclick="zahlEinsetzen(0)">0</sl-button>
+      <sl-button variant="primary" pill onclick="zahlEinsetzen('.')"
+        >.</sl-button
+      >
+      <sl-button variant="primary" pill onclick="gleich()"
+        >=</sl-button
+      >
+      <sl-button variant="primary" pill onclick="zahlEinsetzen('+')"
+        >+</sl-button
+      >
+    </div>
+    <div>
+      <sl-button variant="primary" pill onclick="löschen()">Clear</sl-button>
+      <sl-button variant="primary" pill onclick="einsLöschen()"
+        >Delete</sl-button
+      >
+    </div>
+  </body>
+</html>
