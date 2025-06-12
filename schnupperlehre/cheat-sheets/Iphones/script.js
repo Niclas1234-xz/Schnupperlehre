@@ -28,7 +28,7 @@ const filme = [
   },
 
   {
-    id: 3,
+    id: 4,
     titel: "Iphone 13",
     jahr: 2021,
     marke: "Apple",
@@ -37,7 +37,7 @@ const filme = [
     bild: "https://www.interdiscount.ch/static-shops/products/720/89972ab4d5117dff4ba68b5d52af40991543f8dae741c.jpg",
   },
   {
-    id: 3,
+    id: 5,
     titel: "Iphone 12",
     jahr: 2020,
     marke: "Apple ",
@@ -46,7 +46,7 @@ const filme = [
     bild: "https://swisscomvbc.scene7.com/is/image/Swisscom/scs-11057879-de-000?wid=400&hei=400&fmt=webp-alpha&qlt=90",
   },
   {
-    id: 3,
+    id: 6,
     titel: "Iphone 11",
     jahr: 2019,
     marke: "Apple",
@@ -60,14 +60,21 @@ function zeigeFilmeKacheln() {
   const container = document.getElementById("film-shop");
   container.innerHTML = "";
   filme.forEach((film) => {
-    const kachel = document.createElement("div");
+    const kachel = document.createElement("sl-card");
     kachel.className = "film-kachel";
     kachel.innerHTML = `
-  <img src="${film.bild}">
-  <h3>${film.titel}</h3>
-  <p>Jahr: ${film.jahr}</p>
-  <p>Marke: ${film.marke}</p>
-  <button onclick="zeigeFilmDetails(${film.id})">Details anzeigen</button>
+      <img slot="image" src="${film.bild}" />
+      <strong>${film.titel} </strong><br />
+      ${film.marke}<br />
+      <small>${film.jahr}</small>
+
+      <div slot="footer">
+          <sl-button variant="primary" pill onclick="zeigeFilmDetails(${film.id})">More Info</sl-button>
+          <sl-rating></sl-rating>
+
+</div>
+
+
 
     `;
 
@@ -86,10 +93,6 @@ function zeigeFilmDetails(filmId) {
             <p><strong>Marke:</strong> <span id="detail-marke">${film.marke}</span></p>
            <a href="https://www.apple.com"><button>Jetzt bestellen</button></a>
             <button onclick="zeigeFilmeKacheln()">Zurück zur Iphone Übersicht</button>
-
-
-
-
-       
+      
  `;
 }

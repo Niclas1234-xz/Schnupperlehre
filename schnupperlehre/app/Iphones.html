@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <sl-card class="card-overview">
-  <img
-    slot="image"
-    src="https://swisscomvbc.scene7.com/is/image/Swisscom/scs-11068187-de-000?wid=400&hei=400&fmt=webp-alpha&qlt=90"
-    alt="The New Iphone 16"
-  />
+      <img
+        slot="image"
+        src="https://swisscomvbc.scene7.com/is/image/Swisscom/scs-11068187-de-000?wid=400&hei=400&fmt=webp-alpha&qlt=90"
+        alt="The New Iphone 16"
+      />
 
-  <strong>Iphone 16</strong><br />
-This is the new Iphone 16<br />
-  <small>1 week old</small>
+      <strong>Iphone 16</strong><br />
+      This is the new Iphone 16<br />
+      <small>1 week old</small>
 
-  <div slot="footer">
-    <a href="/schnupperlehre/app/index.html">
-        <sl-button variant="primary" pill>More Info</sl-button>
-    </a>
-    <sl-rating></sl-rating>
-  </div>
-</sl-card>
+      <div slot="footer">
+        <a href="/schnupperlehre/app/index.html"
+          >div
+          <sl-button variant="primary" pill>More Info</sl-button>
+        </a>
+        <sl-rating></sl-rating>
+      </div>
+    </sl-card>
 
-<style>
-  .card-overview {
-    max-width: 300px;
-  }
+    <style>
+      .card-overview {
+        max-width: 300px;
+      }
 
-  .card-overview small {
-    color: var(--sl-color-neutral-500);
-  }
+      .card-overview small {
+        color: var(--sl-color-neutral-500);
+      }
 
-  .card-overview [slot='footer'] {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-</style>
-</body>
+      .card-overview [slot="footer"] {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    </style>
+  </body>
 </html>
